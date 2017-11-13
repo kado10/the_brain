@@ -1,0 +1,162 @@
+/*
+Project Name: Neurall that matters
+Author: Katie Dowden
+Developer @GA in London
+*/
+
+
+/******************************************
+/* SETUP
+/*******************************************/
+
+/* Box Model Hack */
+* {
+  box-sizing: border-box;
+}
+
+/* Clear fix hack */
+.clearfix:before,
+.clearfix:after {
+    content: " ";
+    display: table;
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+/******************************************
+/* BASE STYLES
+/*******************************************/
+
+body {
+	color: #000;
+	line-height: 1.5;
+}
+
+
+/******************************************
+/* LAYOUT
+/*******************************************/
+
+/* Center the container */
+.container {
+	max-width: 90%;
+  margin: 0 auto;
+  width: 1024px;
+}
+
+/******************************************
+/* ADDITIONAL STYLES
+/*******************************************/
+html	{
+	background-color: black;
+}
+
+body {
+	font-family: "Source Sans Pro", sans-serif;
+}
+
+header {
+		text-align: center;
+		background-size: cover;
+		max-width: 100%;	
+		}
+h1		{
+		color: white;	
+		font-family: "Merriweather";
+		font-size: 70px;
+		margin: 25px;
+		}
+#first-word	{
+	color: rgb(47, 85, 151);
+}
+
+#third-word	{
+	color: rgb(118, 113, 113);
+}
+.blue-box 	{
+		background-color: rgb(68, 114, 196);
+		float: left;
+		width: 25%;
+		border: 1px solid black;
+		height: 60px;
+		text-align: center;
+		padding-top: 5px;
+		color: white;
+}
+h2 		{
+		font-size: 40px;
+		text-align: center;
+		display: none;
+		}
+.grey-box 	{
+		margin-top: 20px;
+		width: 500px;
+		padding: 15px;
+		background-color: rgb(231, 230, 230);
+		margin: 10px;
+		float: right;
+		height: 500px;
+		position: relative;
+		z-index: 10;
+		float: right;
+		display:none;
+		}
+p		{
+		padding: 15px;
+		background-color: white;
+		}
+svg	{
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	/*z-index: 0;*/
+	padding-top: 50px;
+	height: 750px;
+	overflow: visible;
+}
+
+.frontal-lobe polygon {
+	fill: #88d317;
+}
+
+.temporal-lobe polygon {
+	fill: #f9be02;
+}
+
+.occipital-lobe polygon {
+	fill: #1b7b34;
+}
+
+.cerebellum polygon {
+	fill: #f81884;
+}
+
+.brainstem polygon {
+	fill: #841983;
+}
+
+.parietal-lobe polygon {
+	fill: #ff533d;
+}
+.frontal-lobe, .parietal-lobe, .temporal-lobe, .occipital-lobe, .cerebellum, .brainstem {
+	transition: all 0.6s;
+	transform-origin: 50% 50%;
+	position: relative;
+	z-index: 0;
+	}
+
+.frontal-lobe:hover, .parietal-lobe:hover, .temporal-lobe:hover, .occipital-lobe:hover, .cerebellum:hover, .brainstem:hover {
+	transform: scale(1.2);
+	z-index: 1;
+	}
+
+.white-box	{
+	background-color: white;
+	margin: 5px;
+}
+
+.overview, .closer, .key-systems, .related-diseases	{
+	display:none;
+}
