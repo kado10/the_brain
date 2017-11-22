@@ -54,7 +54,8 @@ html	{
 }
 
 body {
-	font-family: "Source Sans Pro", sans-serif;
+	font-family: 'Open Sans Condensed', sans-serif;
+	font-weight: 500;
 }
 
 header {
@@ -62,52 +63,74 @@ header {
 		background-size: cover;
 		max-width: 100%;	
 		}
-h1		{
+h1	{
 		color: white;	
-		font-family: "Merriweather";
+		font-family: 'Open Sans Condensed', sans-serif;
 		font-size: 70px;
+		font-weight: 300;
 		margin: 25px;
 		}
+
 #first-word	{
-	color: rgb(47, 85, 151);
+	color: white;
+	font-weight: 900;
 }
 
 #third-word	{
-	color: rgb(118, 113, 113);
+	color: #7D7D7D;
+	font-weight: 900;
 }
-.blue-box 	{
-		background-color: rgb(68, 114, 196);
+.fa-times 	{
+	float: right;
+}
+.nav-box	{
+		margin-top: 10px;
 		float: left;
 		width: 25%;
-		border: 1px solid black;
 		height: 60px;
 		text-align: center;
-		padding-top: 5px;
+		padding-top: 15px;
 		color: white;
+		font-weight: 900;
 }
+
+.nav-box:hover {
+	text-decoration: underline;
+}
+
+.nav-box .clicked {
+	text-decoration: underline;
+}
+
 h2 		{
 		font-size: 40px;
 		text-align: center;
 		display: none;
+		font-weight: 900;
 		}
-.grey-box 	{
-		margin-top: 20px;
+h3		{
+	font-size: 30px;
+	font-weight: 900;
+	padding-left: 10px;
+}
+.box 	{
+		margin-top: 75px;
 		width: 500px;
-		padding: 15px;
-		background-color: rgb(231, 230, 230);
-		margin: 10px;
+		padding: 5px;
+		/*background-color: #cfd8dc;*/
+		margin-right: 50px;
 		float: right;
 		height: 500px;
 		position: relative;
 		z-index: 10;
 		float: right;
-		display:none;
+		display: none;
 		}
 p		{
 		padding: 15px;
 		background-color: white;
 		}
-svg	{
+.svg-container	{
 	display: block;
 	margin-left: auto;
 	margin-right: auto;
@@ -115,36 +138,48 @@ svg	{
 	padding-top: 50px;
 	height: 750px;
 	overflow: visible;
+	width: 750px;
+	position: relative;
+}
+
+svg 	{
+	overflow: visible;
+
+}
+
+.popup	{
+	float: left;
+	margin-left: 100px;
 }
 
 .frontal-lobe polygon {
-	fill: #88d317;
+	fill: #1abc9c;
 }
 
 .temporal-lobe polygon {
-	fill: #f9be02;
+	fill: #f1c40f;
 }
 
 .occipital-lobe polygon {
-	fill: #1b7b34;
+	fill: #3498db;
 }
 
 .cerebellum polygon {
-	fill: #f81884;
+	fill: #95a5a6;
 }
 
 .brainstem polygon {
-	fill: #841983;
+	fill: #9b59b6;
 }
 
 .parietal-lobe polygon {
-	fill: #ff533d;
+	fill: #e74c3c;
 }
 .frontal-lobe, .parietal-lobe, .temporal-lobe, .occipital-lobe, .cerebellum, .brainstem {
 	transition: all 0.6s;
 	transform-origin: 50% 50%;
 	position: relative;
-	z-index: 0;
+	z-index: 1;
 	}
 
 .frontal-lobe:hover, .parietal-lobe:hover, .temporal-lobe:hover, .occipital-lobe:hover, .cerebellum:hover, .brainstem:hover {
@@ -160,3 +195,151 @@ svg	{
 .overview, .closer, .key-systems, .related-diseases	{
 	display:none;
 }
+
+.frontal-lobe-nav	{
+	color: white;
+	background-color: #117964;
+	border: 1px solid #ecfcf9;
+}
+
+.frontal-lobe-style	{
+	color: #148f77;
+}
+
+.frontal-lobe-box	{
+	background-color: #ecfcf9;
+}
+
+.parietal-lobe-nav	{
+	color: white;
+	background-color: #e74c3c;
+	border: 1px solid #fceceb;
+}
+
+.parietal-lobe-style	{
+	color: #e95c4d;
+}
+
+.parietal-lobe-box	{
+	background-color: #fceceb;
+}
+
+.temporal-lobe-nav 	{
+	color: white;
+	background-color: #f1c40f;
+	border: 1px solid #fdf6db;
+}
+
+.temporal-lobe-style 	{
+	color: #dfb50d;
+}
+
+.temporal-lobe-box 	{
+	background-color: #fdf6db;
+}
+
+.occipital-lobe-nav	{
+	color: white;
+	background-color: #3498db;
+	border: 1px solid #ebf5fc;
+}
+
+.occipital-lobe-style	{
+	color: #268fd6;
+}
+
+.occipital-lobe-box	{
+	background-color: #ebf5fc;
+}
+
+.cerebellum-nav	{
+	color: white;
+	background-color: #6c7f81;
+	border: 1px solid #eaedee;
+}
+
+.cerebellum-style	{
+	color: #758a8b;
+}
+
+.cerebellum-box	{
+	background-color: #eaedee;
+}
+
+.brainstem-nav	{
+	color: white;
+	background-color: #42234f;
+	border: 1px solid #f5eff8;
+}
+
+.brainstem-style	{
+	color: #4e295d;
+}
+
+.brainstem-box	{
+	background-color: #f5eff8;
+}
+
+.svg-container span	{
+	color: white;
+	position: absolute;
+	font-size: 40px;
+	font-weight: 600;
+}
+
+.frontal-lobe-label	{
+	top: 225px;
+	left: 125px;
+	-webkit-transform: rotate(-42deg);
+	-moz-transform: rotate(-42deg);
+}
+
+.parietal-lobe-label	{
+	top: 150px;
+	left: 435px;
+	-webkit-transform: rotate(5deg);
+	-moz-transform: rotate(5deg);
+}
+
+.temporal-lobe-label	{
+	top: 385px;
+	left: 300px;
+	-webkit-transform: rotate(-20deg);
+	-moz-transform: rotate(-20deg);
+}
+
+.occipital-lobe-label	{
+	top: 300px;
+	left: 580px;
+	word-wrap: break-word;
+	text-align: center;
+	-webkit-transform: rotate(-15deg);
+	-moz-transform: rotate(-15deg);
+}
+
+.cerebellum-label	{
+	top: 475px;
+	left: 500px;
+	-webkit-transform: rotate(-10deg);
+	-moz-transform: rotate(-10deg);
+}
+
+.brainstem-label	{
+	top: 540px;
+	left: 395px;
+	-webkit-transform: rotate(60deg);
+	-moz-transform: rotate(60deg);
+}
+
+.hidden	{
+	display: none;
+}
+
+.white-box ul 	{
+	padding-left: 30px;
+	background-color: white;
+	list-style-type: circle;
+}
+
+
+
